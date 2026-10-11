@@ -111,3 +111,50 @@
 // const sum = prefixSum[right] - prefixSum[left - 1];
 
 // console.log(sum); // 9
+
+
+
+
+// ------------------------------Kadane's Algorithm----------------------------------------------
+
+
+// Find the maximum subarray sum in [-2, 1, -3, 4, -1, 2, 1]. 
+
+
+// ---ans
+
+// const arr = [-2, 1, -3, 4, -1, 2, 1];
+
+// let current = arr[0];
+// let maxSum = arr[0];
+
+// for (let i = 1; i < arr.length; i++) {
+//   current = Math.max(arr[i], current + arr[i]);
+//   maxSum = Math.max(maxSum, current);
+// }
+
+// console.log(maxSum); // 6
+
+
+
+// -----------------------------------in-Place modification ---------------------------------------
+
+// Remove all 0s from [1, 0, 2, 0, 3] in-place and move the non-zero elements to the beginning. 
+
+
+// const arr = [1, 0, 2, 0, 3];
+
+// let j = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] !== 0) {
+//     arr[j] = arr[i];
+//     j++;
+//   }
+// }
+
+// console.log(arr); // [1, 2, 3, 0, 3]
+
+// arr.length = j;
+
+// console.log(arr); // [1, 2, 3]
