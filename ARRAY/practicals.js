@@ -158,3 +158,80 @@
 // arr.length = j;
 
 // console.log(arr); // [1, 2, 3]
+
+
+
+
+// -------------------------------------matrix traversal-------------------------------------------
+
+// Find the sum of all elements in this matrix: 
+
+// [
+//   [1, 2],
+//   [3, 4]
+// ]
+
+// output = 10
+
+
+// ----ans 
+
+// const matrix = [
+//   [1, 2],
+//   [3, 4]
+// ];
+
+// let sum = 0;
+
+// for (let i = 0; i < matrix.length; i++) {
+//   for (let j = 0; j < matrix[i].length; j++) {
+//     sum += matrix[i][j];
+//   }
+// }
+
+// console.log(sum); // 10
+
+
+
+
+// ----------------------------------------8. Intervals------------------------------------------
+
+
+// Question:
+// Given intervals:
+// [[1, 3], [2, 6], [8, 10]]
+
+// Merge the overlapping intervals.
+
+//  output -  [[1, 6], [8, 10]] 
+
+
+
+// ---ans 
+
+// const intervals = [[1, 3], [2, 6], [8, 10]];
+
+// intervals.sort((a, b) => a[0] - b[0]);
+
+// const result = [intervals[0]];
+
+// for (let i = 1; i < intervals.length; i++) {
+//   const last = result[result.length - 1];
+//   const current = intervals[i];
+
+//   if (current[0] <= last[1]) {
+//     last[1] = Math.max(last[1], current[1]);
+//   } else {
+//     result.push(current);
+//   }
+// }
+
+// console.log(result);
+// // [[1, 6], [8, 10]]
+
+
+// Logic:
+// If the current interval starts before the previous interval ends, they overlap → merge them.
+
+
+
